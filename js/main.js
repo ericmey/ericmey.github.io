@@ -5,12 +5,9 @@ $(document).ready(function() {
   // FitVid.js
   $(".main-container").fitVids();
 
-  // Fix Widows
-  $('p').widowFix();
-
   // Fancybox.js
   $('.fancybox').fancybox();
 
   // BackStretch.js
-  $("#masthead").backstretch("img/masthead@2x.jpg");
+  $("#masthead").backstretch("/img/masthead@2x.jpg");
 });

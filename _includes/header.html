@@ -1,4 +1,3 @@
-
 <div id="{% if include.masthead == 'true' %}masthead{% endif %}" class="header-container">
   <header class="wrapper clearfix"><a href="index.html" class="logo"><img src="/img/logo@2x.png" alt="Logo"/></a>
     <nav>
@@ -10,7 +9,8 @@
         <li class="last"><a href="/contact.html" class="{% if page.slug == 'contact' %}active{% endif %}">Contact</a></li>
       </ul>
     </nav>
-  </header>{% if include.masthead == 'true' %}
+  </header>
+  {% if include.masthead == 'true' %}
   <div class="wrapper clearfix">
     <div class="cta two-third">
       <h1>You Idiots!</h1>
@@ -18,5 +18,6 @@
       <h5>— Spaceballs</h5><br/>
       <p>No more boring V-Cards, Selfy is the perfect theme for self promotion. A little piece of the internet all about you, customise and self express with Selfy...&nbsp;<a href="styles.html">Read More</a></p>
     </div>
-  </div>{% endif %}
+  </div>
+  {% endif %}
 </div>

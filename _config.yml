@@ -7,7 +7,7 @@ twitter_username: ericmey
 github_username: ericmey
 
 # Build settings
-exclude: ["Gemfile", "Gemfile.lock", "gulpfile.babel.js", "LICENSE", "package.json", "README.md"]
+exclude: ["Gemfile", "Gemfile.lock", "gulpfile.babel.js", "LICENSE", "node_modules", "package.json", "README.md"]
 
 gems:
   - jekyll-sitemap
