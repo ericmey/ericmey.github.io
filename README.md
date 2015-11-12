@@ -1,4 +1,4 @@
-# ericmey-gh-pages
+# ericmey.github.io
 
-Eric Mey - GitHub Pages
+Eric Mey - Website
 ===
