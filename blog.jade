@@ -1,0 +1,27 @@
+---
+title: Blog
+layout: default
+slug: blog
+---
+
+.main-container
+  .main.wrapper.clearfix
+
+    .main-content.full
+      .clearfix
+    
+        {% for post in site.posts %}
+          .clearfix
+            .third
+              h2
+                a(href='{{ post.url }}') {{ post.title }}
+              h6.meta Posted on 11 Nov 2015
+              p.lead Commodo blah blah blah
+              p blah blah blah blah
+              p
+                a.more(href='{{ post.url }}') Read More
+            .two-third.last
+              a(href='{{ post.url }}' title='Insert Your Title')
+                img(src='/img/mock.jpg' alt='{{ post.title }}')
+          hr
+        {% endfor %}

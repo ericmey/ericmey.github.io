@@ -1,0 +1,51 @@
+---
+title: Contact Me
+layout: default
+slug: contact
+---
+
+.main-container
+  .main.wrapper.clearfix
+
+    .main-content
+      .clearfix
+            
+        h1 Contact Me
+        p.lead Praesent commodo cursus magna, venenatis vestibulum. Donec id elit non mi porta gravida at eget vel scelerisl consectetur etsie.
+
+        p Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla.
+
+        form#contactform(action='php/processForm.php', method='post')
+          table.tableless(width='100%', class='tableless')
+            tr
+              td
+                input#name(type='text', name='name', placeholder='What\'s your name', autofocus)
+            tr
+              td
+                input#email(type='email', name='email', placeholder='Email goes here')
+            tr
+              td
+                textarea#message(name='message', rows='5', cols='20', placeholder='Whats this about?')
+            tr
+              td
+                input.btn#send(name='button', type='submit', value='Send Message')
+
+        #response
+
+    aside.right-aside
+      h2 Networks
+      ul
+        li
+          a(href='post.html') Follow Me on Facebook
+        li
+          a(href='post.html') Hanging out on Dribbble
+        li
+          a(href='post.html') Tweeting up a storm
+
+      hr.dots
+
+      p
+        em Vestibulum id ligula porta felis euismod semper. Maecenas sed diam eget risus varius blandit sit ametr nulla non metus auctor fringilla.
+      
+      p
+        a.more(href='styles.html') See the Full Theme Styles

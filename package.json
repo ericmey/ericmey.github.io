@@ -1,0 +1,34 @@
+{
+  "name": "ericmey-gh-pages",
+  "version": "1.0.0",
+  "description": "Eric Mey - GitHub Pages",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ericmey/ericmey-gh-pages.git"
+  },
+  "keywords": [
+    "Eric",
+    "Mey",
+    "GitHub",
+    "Pages"
+  ],
+  "author": "Eric Mey <ericmey@gmail.com> (https://ericmey.github.io)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/ericmey/ericmey-gh-pages/issues"
+  },
+  "homepage": "https://github.com/ericmey/ericmey-gh-pages#readme",
+  "devDependencies": {
+    "babel-eslint": "^4.1.4",
+    "eslint": "^1.9.0",
+    "eslint-config-airbnb": "^1.0.0",
+    "eslint-plugin-react": "^3.7.1",
+    "gulp": "^3.9.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-load-plugins": "^1.1.0"
+  }
+}

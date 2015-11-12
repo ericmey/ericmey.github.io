@@ -1,0 +1,45 @@
+doctype html
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]-->
+head
+  meta(charset='utf-8')
+  meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+  meta(content='black', name='apple-mobile-web-app-status-bar-style')
+
+  title {{ site.name }}
+  meta(name='description', content='Project Library, Source Code, Blog, and Ninja Skills')
+  
+  link(rel='stylesheet', type='text/css', href='//cdnjs.cloudflare.com/ajax/libs/normalize/1.0.1/normalize.min.css')
+  link(rel='stylesheet', type='text/css', href='/css/selfy.css')
+  link(rel='stylesheet', type='text/css', href='//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css')
+
+  script(src='//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js')
+  script(src='//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js')
+
+body
+  <!--[if lt IE 7]>
+  <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+  <![endif]-->
+
+  | {% include header.html masthead="true" %}
+
+  | {{ content }}
+
+  | {% include footer.html %}
+
+  script(src='//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js')
+  script(src='//cdnjs.cloudflare.com/ajax/libs/TinyNav.js/1.2.0/tinynav.min.js')
+  script(src='//cdnjs.cloudflare.com/ajax/libs/fitvids/1.1.0/jquery.fitvids.min.js')
+  script(type='text/javascript', src='/js/jquery.widowFix-1.3.2.min.js')
+  script(src='//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js')
+  script(src='//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js')
+  script(type='text/javascript', src='/js/main.js')
+
+  //- Google Analytics
+  script.
+    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));

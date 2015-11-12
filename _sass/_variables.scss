@@ -1,0 +1,138 @@
+//@extend-elements
+//original selectors
+//.main-content img, .right-aside img
+%extend-1 {
+  max-width: 100%;
+  width: 100%;
+  background: $color-geyser;
+  border: 6px solid $color-white;
+  margin: 1em 0;
+  //Instead of the line below you could use @include box-sizing($bs)
+  box-sizing: border-box;
+}
+
+//original selectors
+//.two-third, .cta.two-third
+%extend-2 {
+  width: 65%;
+  margin-right: 5%;
+  float: left;
+}
+
+//original selectors
+//h1, h2, h3, h4, h5, h6
+%extend-3 {
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: -1px;
+  margin: 25px 0 .5em;
+}
+
+//original selectors
+//h1:after, h2:after, h3:after
+%extend-4 {
+  content: ".";
+  font-size: 56px;
+  position: relative;
+  padding-left: 3px;
+}
+
+//original selectors
+//.lead, blockquote
+%extend-5 {
+  font-size: 24px;
+  line-height: 32px;
+  font-family: $font-aleo;
+}
+
+//original selectors
+//.main ul li, .more
+%extend-6 {
+  list-style-type: none;
+  line-height: 20px;
+  padding-top: 5px;
+  padding-bottom: 8px;
+  position: relative;
+  padding-left: 22px;
+}
+
+//original selectors
+//.main ul li:before, .more:before
+%extend-7 {
+  content: "g";
+  font-family: $font-bullets;
+  font-size: 16px;
+  left: 3px;
+  top: 6px;
+  position: absolute;
+}
+
+//original selectors
+//a.btn, input[type=button], input[type=submit]
+%extend-8 {
+  border: none;
+  color: $color-white;
+  font-weight: 400;
+  font-size: 18px;
+  font-family: $font-roboto;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: 3px;
+  padding: .6em 1.2em;
+  white-space: nowrap;
+  display: inline-block;
+  //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+  transition: all 250ms ease-in-out;
+  margin-bottom: .5em;
+  margin-top: .5em;
+}
+
+//original selectors
+//input[type=text], input[type=email], input[type=password], textarea
+%extend-9 {
+  border: 1px solid $color-mercury;
+  background: $color-white;
+  padding: 10px 2%;
+  font-family: $font-roboto;
+  color: $color-pewter;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: 3px;
+  outline: none;
+  margin-bottom: 1em;
+  resize: none;
+  display: block;
+  width: 68%;
+}
+
+//original selectors
+//.main-content, .right-aside
+%extend-10 {
+  width: 100%;
+  float: none;
+  border: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+//original selectors
+//.third, .half, .fourths, .two-third, ol.icon-lists li, ul.flag-lists li, .three-fourths, .foot.left, .foot.right
+%extend-11 {
+  width: 100%;
+  margin-right: 0;
+  float: none;
+}
+
+//original selectors
+//.foot.left, .foot.right
+%extend-12 {
+  display: block;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+//original selectors
+//.tableless, .tableless th, .tableless tr, .tableless td
+%extend-13 {
+  background: none;
+  border: none;
+  padding: 0;
+}

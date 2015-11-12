@@ -1,0 +1,19 @@
+# Site settings
+name: Eric Mey
+title: Eric Mey
+email: ericmey@gmail.com
+description: Code and ninja skills...
+baseurl: ""
+url: "https://ericmey.github.io"
+twitter_username: ericmey
+github_username: ericmey
+
+# Global settings
+timezone: America/Indiana/Indianapolis
+encoding: utf-8
+
+# Build settings
+exclude: ["Gemfile", "Gemfile.lock", "gulpfile.babel.js", "LICENSE", "package.json", "README.md"]
+
+gems:
+  - jekyll-sitemap

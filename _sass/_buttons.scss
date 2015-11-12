@@ -1,0 +1,25 @@
+button {
+  color: $color-nevada;
+}
+
+input[type=button] {
+  background-color: $color-amber;
+  color: $color-white;
+  @extend %extend-8;
+
+  &:hover {
+    background-color: $color-nevada;
+    color: $color-white;
+  }
+}
+
+input[type=submit] {
+  background-color: $color-amber;
+  color: $color-white;
+  @extend %extend-8;
+
+  &:hover {
+    background-color: $color-nevada;
+    color: $color-white;
+  }
+}

@@ -1,0 +1,27 @@
+.header-container(id!='{% if include.masthead == \'true\' %}masthead{% endif %}')
+  header.wrapper.clearfix
+    a.logo(href='index.html')
+      img(src='/img/logo@2x.png', alt='Logo')
+    nav
+      ul#nav.nav
+        li
+          a(href='/index.html', class!='{% if page.slug == \'home\' %}active{% endif %}') Home
+        li
+          a(href='/about.html', class!='{% if page.slug == \'about\' %}active{% endif %}') About
+        li
+          a(href='https://github.com/ericmey', target='_blank') Code
+        li
+          a(href='/blog.html', class!='{% if page.slug == \'blog\' %}active{% endif %}') Blog
+        li.last
+          a(href='/contact.html', class!='{% if page.slug == \'contact\' %}active{% endif %}') Contact
+  | {% if include.masthead == 'true' %}
+  .wrapper.clearfix
+    .cta.two-third
+      h1 You Idiots!
+      h3 These are not them! You’ve captured their stunt doubles!
+      h5 — Spaceballs
+      br
+      p
+        | No more boring V-Cards, Selfy is the perfect theme for self promotion. A little piece of the internet all about you, customise and self express with Selfy...&nbsp;
+        a(href='styles.html') Read More
+  | {% endif %}
