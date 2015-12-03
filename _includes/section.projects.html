@@ -1,0 +1,18 @@
+<!-- BEGIN Projects Section -->
+<section class="page" id="projects">
+  <div class="content">
+    <ul>
+    {% for repository in site.github.public_repositories %}
+      <li>
+        <a href="{{ repository.html_url }}" target="_blank">{{ repository.full_name }}</a><br>
+        <p>{{ repository.description }}</p>
+        <p>
+          Created At: {{ repository.created_at }}<br>
+          Updated At: {{ repository.updated_at }}
+        <p>
+      </li>
+    {% endfor %}
+    </ul>
+  </div>
+</section>
+<!-- END Projects Section -->

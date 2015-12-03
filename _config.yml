@@ -3,6 +3,7 @@ name: Eric Mey
 email: ericmey@gmail.com
 description: Code and ninja skills...
 url: "https://ericmey.github.io"
+repository: ericmey
 twitter_username: ericmey
 github_username: ericmey
 
@@ -11,3 +12,4 @@ exclude: ["Gemfile", "Gemfile.lock", "gulpfile.babel.js", "LICENSE", "node_modul
 
 gems:
   - jekyll-sitemap
+  - jekyll-github-metadata

@@ -1,0 +1,30 @@
+<!-- BEGIN Blog Section -->
+<section class="page" id="blog">
+  <div class="content">
+
+    <!-- BEGIN Latest Posts -->
+    <h2 class="section-title center"><span><i class="icon-book-open"></i>LATEST FROM THE BLOG</span></h2>
+    <div class="latest-posts media-grid" data-layout="fitRows">
+      {% for post in site.posts %}
+      <article class="hentry media-cell">
+        <div class="media-box">
+          <img src="/img/blog/{{ post.image }}" alt="post-image">
+          <div class="mask"></div>
+          <a href="{{ post.url }}"></a>
+        </div>
+        <header class="media-cell-desc">
+          <span title="{{ post.date | date: '%Y' }}" class="date"><span class="day">{{ post.date | date: '%d' }}</span>{{ post.date | date: '%b' }}</span>
+          <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+        </header>
+      </article>
+      {% endfor %}
+    </div>
+    <!-- End Latest Posts -->
+
+    <!-- BEGIN All Posts -->
+    <p class="launch"><a class="button primary" href="blog.html">SEE ALL POSTS</a></p>
+    <!-- End All Posts -->
+
+  </div>
+</section>
+<!-- END Blog Section -->
