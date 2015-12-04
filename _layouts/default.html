@@ -4,34 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <title>Eric Mey</title>
-    <meta name="description" content="Eric Mey an Experienced Node.js and JavaScript Software Engineer">
-    <meta name="keywords" content="Eric Mey,Software Engineer,Code,Portfolio,Resume,JavaScript,Node.js,AngularJS,NoSQL,MongoDB,Redis,Big Data,Hadoop">
-    <meta name="author" content="Eric Mey">
-
+    {% include header.meta.html %}
     {% include header.favicon.html %}
-
-    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic">
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Oswald">
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Tangerine:400,700">
-
-    <link rel="stylesheet" href="/css/print.css" media="print">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/font/fontello/css/fontello.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/Uniform.js/2.1.2/themes/default/css/uniform.default.min.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.0/flexslider.min.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/mediaelement/2.18.2/mediaelementplayer.min.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/tooltipster/3.3.0/css/tooltipster.min.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/main.css">
+    {% include header.scripts.html %}
+    {% include header.styles.html %}
 
     <!--[if lt IE 9]>
       <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -40,49 +16,16 @@
     <![endif]-->
   </head>
   <body>
-    <!-- BEGIN Container -->
-    <div class="container" id="container">
-      {% include content.header.html %}
+    {% include content.header.html %}
 
-      <!-- BEGIN Wrapper -->
-      <div class="wrapper">
-        {% include section.about.html %}
-        {% include section.projects.html %}
-        {% include section.blog.html %}
-        {% include section.contact.html %}
-        {% include section.resume.html %}
-      </div>
-      <!-- END Wrapper -->
-    </div>
-    <!-- END Container -->
+    {% include section.about.html %}
+    {% include section.projects.html %}
+    {% include section.blog.html %}
+    {% include section.contact.html %}
+    {% include section.resume.html %}
 
-    <!-- Portfolio Single Ajax Content Container -->
-    <div class="p-overlay"></div>
+    {% include content.footer.html %}
 
-    <!-- Alert: Used for contact form mail delivery alert. -->
-    <div class="site-alert animated"></div>
-
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.2.1/jquery-migrate.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
-    <script src="/js/triple.layout.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.1/SmoothScroll.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.2.0/imagesloaded.pkgd.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.0/jquery.flexslider-min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.1.0/jquery.fitvids.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.14.0/jquery.validate.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/Uniform.js/2.1.2/jquery.uniform.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/tooltipster/3.3.0/js/jquery.tooltipster.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
-    <script src="/js/twitterFetcher.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/mediaelement/2.18.2/mediaelement-and-player.min.js"></script>
-    <script src="/js/sendmail.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/classie/1.0.1/classie.min.js"></script>
-    <script src="//maps.googleapis.com/maps/api/js?v=3.exp"></script>
-    <script src="/js/main.js"></script>
+    {% include footer.scripts.html %}
   </body>
 </html>
