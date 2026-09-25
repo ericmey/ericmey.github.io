@@ -1,13 +1,14 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-interface Props { article: CollectionEntry<'articles'> }
-const { article } = Astro.props;
+interface Props { article: CollectionEntry<'articles'>; level?: 2 | 3 }
+const { article, level = 3 } = Astro.props;
+const H = `h${level}` as 'h2' | 'h3';
 const { title, summary, date, venue, url } = article.data;
 const href = url ?? `/articles/${article.id}`;
 const day = date.toISOString().slice(0, 10);
 ---
 <article class="card">
-  <h3><a href={href}>{title}</a></h3>
+  <H><a href={href}>{title}</a></H>
   <p>{summary}</p>
   <div class="meta"><time datetime={day}>{day}</time> · {venue}</div>
 </article>

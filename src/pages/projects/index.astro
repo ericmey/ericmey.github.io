@@ -8,5 +8,5 @@ const projects = (await getCollection('projects')).sort((a, b) => a.data.order -
 <Base title="Projects" description="Systems I have built, each with links to the code and the evidence behind its claims.">
   <h1>Projects</h1>
   <p class="lede">Each project links to its code, and to the evidence behind any claim it makes.</p>
-  <div class="cards">{projects.map((p) => <ProjectCard project={p} />)}</div>
+  <div class="cards">{projects.map((p) => <ProjectCard project={p} level={2} />)}</div>
 </Base>

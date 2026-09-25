@@ -2,7 +2,7 @@
 export const SITE = {
   name: 'Eric Mey',
   title: 'Eric Mey: applied AI systems',
-  tagline: 'I build AI systems that run for real: routing, memory, voice and image pipelines, measured with evals.',
+  tagline: 'I build applied AI systems (request routing, agent memory and image pipelines) and publish the code, data and evals behind them.',
   location: 'Carmel, Indiana',
   links: {
     github: 'https://github.com/ericmey',
