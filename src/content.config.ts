@@ -31,6 +31,7 @@ const articles = defineCollection({
     date: z.coerce.date(),
     venue: z.string(), // e.g. "Hugging Face", "LinkedIn"
     url: z.url().optional(), // external home of the article, if any
+    cover: z.string().optional(), // path under /public, e.g. /covers/<slug>.webp
     tags: z.array(z.string()).default([]),
     draft: z.boolean().default(false),
   }),

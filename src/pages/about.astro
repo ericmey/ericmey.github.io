@@ -3,7 +3,8 @@ import Base from '../layouts/Base.astro';
 import { SITE } from '../site';
 ---
 <Base title="About" description={SITE.tagline}>
-  <h1>About</h1>
+  <div class="wrap">
+  <header class="page-head"><h1>About</h1></header>
   <div class="prose">
     <p>I build systems. Some run on code, some run on hardware, and most end up being a mix of both.</p>
     <p>
@@ -18,5 +19,6 @@ import { SITE } from '../site';
     </p>
     <p>Outside of that: guitar, sound design, visual work, and building things that don't fit neatly into categories.</p>
     <p>Based in {SITE.location}.</p>
+  </div>
   </div>
 </Base>

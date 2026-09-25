@@ -11,16 +11,21 @@ const { Content } = await render(project);
 const { title, summary, tags, links, evidence } = project.data;
 ---
 <Base title={title} description={summary}>
-  <h1>{title}</h1>
-  <p class="lede">{summary}</p>
-  <p class="links">{links.map((l) => <a href={l.url}>{l.label}</a>)}</p>
-  <ul class="tags">{tags.map((t) => <li>{t}</li>)}</ul>
-  <div class="prose"><Content /></div>
-  {evidence.length > 0 && (
-    <section class="evidence">
-      <h2>Check it yourself</h2>
-      <ul>{evidence.map((e) => <li><a href={e.url}>{e.claim}</a></li>)}</ul>
-    </section>
-  )}
-  <p><a href="/projects">← All projects</a></p>
+  <div class="wrap">
+    <header class="page-head">
+      <p class="eyebrow" style="color: var(--amber)">Project</p>
+      <h1>{title}</h1>
+      <p class="lede">{summary}</p>
+      <div class="detail-links">{links.map((l) => <a href={l.url}>{l.label} ↗</a>)}</div>
+      <ul class="tags">{tags.map((t) => <li>{t}</li>)}</ul>
+    </header>
+    <div class="prose"><Content /></div>
+    {evidence.length > 0 && (
+      <section class="evidence">
+        <h2>Check it yourself</h2>
+        <ul>{evidence.map((e) => <li><a href={e.url}>{e.claim}</a></li>)}</ul>
+      </section>
+    )}
+    <p><a href="/projects">← All projects</a></p>
+  </div>
 </Base>

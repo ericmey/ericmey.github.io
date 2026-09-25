@@ -3,12 +3,18 @@ import type { CollectionEntry } from 'astro:content';
 interface Props { article: CollectionEntry<'articles'>; level?: 2 | 3 }
 const { article, level = 3 } = Astro.props;
 const H = `h${level}` as 'h2' | 'h3';
-const { title, summary, date, venue, url } = article.data;
+const { title, summary, date, venue, url, cover } = article.data;
 const href = url ?? `/articles/${article.id}`;
 const day = date.toISOString().slice(0, 10);
+const initials = title.replace(/[^A-Za-z ]/g, '').split(' ').filter(Boolean).slice(0, 2).map((w) => w[0]).join('');
 ---
 <article class="card">
-  <H><a href={href}>{title}</a></H>
-  <p>{summary}</p>
-  <div class="meta"><time datetime={day}>{day}</time> · {venue}</div>
+  {cover
+    ? <div class="media"><img src={cover} alt="" loading="lazy" decoding="async" width="1200" height="675" /></div>
+    : <div class="media placeholder" aria-hidden="true">{initials}</div>}
+  <div class="body">
+    <H><a href={href}>{title}</a></H>
+    <p>{summary}</p>
+    <div class="meta"><time datetime={day}>{day}</time> · <span class="venue">{venue}</span></div>
+  </div>
 </article>

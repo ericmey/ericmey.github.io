@@ -4,27 +4,58 @@ import Base from '../layouts/Base.astro';
 import ProjectCard from '../components/ProjectCard.astro';
 import ArticleItem from '../components/ArticleItem.astro';
 import { SITE } from '../site';
+import { NEWS } from '../data/news';
 
 const featured = (await getCollection('projects', (p) => p.data.featured))
   .sort((a, b) => a.data.order - b.data.order);
 const articles = (await getCollection('articles', (a) => !a.data.draft))
-  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
-  .slice(0, 3);
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+const latest = articles.slice(0, 3);
+const news = [
+  ...NEWS.map((n) => ({ date: n.date, text: n.text, url: n.url })),
+  ...articles.map((a) => ({
+    date: a.data.date.toISOString().slice(0, 10),
+    text: `Published “${a.data.title}” on ${a.data.venue}.`,
+    url: a.data.url,
+  })),
+]
+  .sort((a, b) => b.date.localeCompare(a.date))
+  .slice(0, 6);
 ---
 <Base>
-  <h1>{SITE.name}</h1>
-  <p class="lede">{SITE.tagline}</p>
-  <p class="links">
-    <a href={SITE.links.github}>GitHub</a>
-    <a href={SITE.links.huggingface}>Hugging Face</a>
-    {SITE.links.linkedin && <a href={SITE.links.linkedin}>LinkedIn</a>}
-  </p>
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Applied AI systems</p>
+      <h1>{SITE.name}</h1>
+      <p class="lede">{SITE.tagline}</p>
+      <div class="pills">
+        <a class="pill primary" href="/projects">See the work</a>
+        <a class="pill" href="/articles">Read the writing</a>
+        <a class="pill" href={SITE.links.github}>GitHub</a>
+        <a class="pill" href={SITE.links.huggingface}>Hugging Face</a>
+        {SITE.links.linkedin && <a class="pill" href={SITE.links.linkedin}>LinkedIn</a>}
+      </div>
+    </div>
+  </section>
 
-  <h2>Featured work</h2>
-  <div class="cards">{featured.map((p) => <ProjectCard project={p} />)}</div>
-  <p><a href="/projects">All projects →</a></p>
+  <div class="wrap">
+    <section class="block">
+      <div class="section-head"><h2>Featured work</h2><a href="/projects">All projects →</a></div>
+      <div class="grid featured">{featured.map((p) => <ProjectCard project={p} />)}</div>
+    </section>
 
-  <h2>Recent writing</h2>
-  <div class="cards">{articles.map((a) => <ArticleItem article={a} />)}</div>
-  <p><a href="/articles">All writing →</a></p>
+    <section class="block">
+      <div class="section-head"><h2>Latest writing</h2><a href="/articles">All {articles.length} articles →</a></div>
+      <div class="grid">{latest.map((a) => <ArticleItem article={a} />)}</div>
+    </section>
+
+    <section class="block narrow">
+      <div class="section-head"><h2>News</h2></div>
+      <ul class="news">
+        {news.map((n) => (
+          <li><time datetime={n.date}>{n.date}</time>{n.url ? <a href={n.url}>{n.text}</a> : n.text}</li>
+        ))}
+      </ul>
+    </section>
+  </div>
 </Base>
