@@ -1,0 +1,20 @@
+---
+// Local pages only for articles that live on this site (no external `url`).
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+
+export async function getStaticPaths() {
+  const articles = await getCollection('articles', (a) => !a.data.draft && !a.data.url);
+  return articles.map((article) => ({ params: { id: article.id }, props: { article } }));
+}
+const { article } = Astro.props;
+const { Content } = await render(article);
+const { title, summary, date, venue } = article.data;
+const day = date.toISOString().slice(0, 10);
+---
+<Base title={title} description={summary}>
+  <h1>{title}</h1>
+  <p class="meta"><time datetime={day}>{day}</time> · {venue}</p>
+  <div class="prose"><Content /></div>
+  <p><a href="/articles">← All writing</a></p>
+</Base>

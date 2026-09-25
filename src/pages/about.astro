@@ -1,0 +1,21 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE } from '../site';
+---
+<Base title="About" description={SITE.tagline}>
+  <h1>About</h1>
+  <div class="prose">
+    <p>I build systems. Some run on code, some run on hardware, and most end up a mix of both.</p>
+    <p>
+      My work sits in applied AI: routing requests to the right model, giving a fleet of agents shared
+      memory, voice and image pipelines, and the evaluation work that says whether any of it is good.
+      I run my own infrastructure, from a Jetson Orin Nano at the edge to GPU render servers, and I like
+      to measure what I build before I claim anything about it.
+    </p>
+    <p>
+      I work across Python, TypeScript and Java, and C for hardware. Outside of that: guitar, sound design,
+      and building things that don't fit neatly into categories.
+    </p>
+    <p>Based in {SITE.location}.</p>
+  </div>
+</Base>

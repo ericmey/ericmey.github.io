@@ -1,0 +1,30 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import ArticleItem from '../components/ArticleItem.astro';
+import { SITE } from '../site';
+
+const featured = (await getCollection('projects', (p) => p.data.featured))
+  .sort((a, b) => a.data.order - b.data.order);
+const articles = (await getCollection('articles', (a) => !a.data.draft))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 3);
+---
+<Base>
+  <h1>{SITE.name}</h1>
+  <p class="lede">{SITE.tagline}</p>
+  <p class="links">
+    <a href={SITE.links.github}>GitHub</a>
+    <a href={SITE.links.huggingface}>Hugging Face</a>
+    {SITE.links.linkedin && <a href={SITE.links.linkedin}>LinkedIn</a>}
+  </p>
+
+  <h2>Featured work</h2>
+  <div class="cards">{featured.map((p) => <ProjectCard project={p} />)}</div>
+  <p><a href="/projects">All projects →</a></p>
+
+  <h2>Recent writing</h2>
+  <div class="cards">{articles.map((a) => <ArticleItem article={a} />)}</div>
+  <p><a href="/articles">All writing →</a></p>
+</Base>

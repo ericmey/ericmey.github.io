@@ -1,9 +1,4 @@
-.jekyll-metadata
-.sass-cache
+node_modules/
+dist/
+.astro/
 .DS_Store
-
-*.log
-
-_build
-_site
-node_modules

@@ -1,0 +1,39 @@
+:root {
+  --bg: #fbfbf9; --fg: #1c1d1f; --muted: #5d6166; --line: #e3e3de;
+  --accent: #1f5fbf; --card: #ffffff; --tag: #eef1f5;
+  --max: 46rem;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #111214; --fg: #e8e8e6; --muted: #a0a4aa; --line: #2a2c30; --accent: #7fb0ff; --card: #17181b; --tag: #22252a; }
+}
+* { box-sizing: border-box; }
+html { background: var(--bg); color: var(--fg); }
+body { margin: 0; line-height: 1.6; font-size: 1.0625rem; }
+a { color: var(--accent); text-underline-offset: 0.15em; }
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 1rem; }
+header.site { border-bottom: 1px solid var(--line); }
+header.site .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-top: 1rem; padding-bottom: 1rem; flex-wrap: wrap; }
+header.site .name { font-weight: 700; color: var(--fg); text-decoration: none; letter-spacing: -0.01em; }
+nav a { color: var(--muted); text-decoration: none; margin-left: 1.1rem; }
+nav a:first-child { margin-left: 0; }
+nav a[aria-current="page"], nav a:hover { color: var(--fg); }
+main { padding: 2.5rem 0 3rem; }
+h1 { font-size: 2rem; line-height: 1.2; letter-spacing: -0.02em; margin: 0 0 0.75rem; }
+h2 { font-size: 1.2rem; margin: 2.5rem 0 1rem; letter-spacing: -0.01em; }
+.lede { font-size: 1.2rem; color: var(--muted); margin: 0 0 1.5rem; }
+.links a { margin-right: 1rem; }
+.cards { display: grid; gap: 1rem; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 1.1rem 1.2rem; }
+.card h3 { margin: 0 0 0.35rem; font-size: 1.05rem; }
+.card h3 a { color: var(--fg); text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; }
+.card p { margin: 0 0 0.6rem; color: var(--muted); }
+.meta { color: var(--muted); font-size: 0.9rem; }
+.tags { display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 0; padding: 0; list-style: none; }
+.tags li { background: var(--tag); border-radius: 999px; padding: 0.05rem 0.6rem; font-size: 0.8rem; color: var(--muted); }
+.prose p, .prose li { max-width: 42rem; }
+.evidence { border-left: 3px solid var(--accent); padding: 0.4rem 0 0.4rem 1rem; margin: 2rem 0; }
+.evidence h2 { margin-top: 0; font-size: 1rem; }
+footer.site { border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem; }
+footer.site .wrap { padding-top: 1.25rem; padding-bottom: 2rem; }

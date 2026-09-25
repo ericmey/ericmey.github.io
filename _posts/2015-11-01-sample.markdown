@@ -1,5 +1,0 @@
----
-layout: default
-title: Sample Post
-image: sample.png
----
