@@ -1,6 +1,6 @@
 ---
 title: openclaw-musubi
-summary: A first-class memory provider for OpenClaw agents, backed by Musubi. Every completed turn is committed to a durable outbox, with semantic recall, exact reads and deliberate stores.
+summary: A first-class memory provider for OpenClaw agents, backed by Musubi. Eligible completed turns are committed to a durable outbox, with semantic recall, exact reads and deliberate stores.
 order: 30
 tags: [typescript, plugin, memory, agents]
 links:
