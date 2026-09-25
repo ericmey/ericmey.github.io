@@ -9,7 +9,7 @@ export const SITE = {
     huggingface: 'https://huggingface.co/ericmey',
     // TODO(Eric): confirm the LinkedIn profile URL before this goes live.
     linkedin: null as string | null,
-    // TODO(Eric): confirm a public contact address (e.g. a sourceblender.com inbox) before this goes live.
-    email: null as string | null,
+    // Public contact for recruiters (Eric, 2026-09-25).
+    email: 'ericmey@gmail.com' as string | null,
   },
 };
