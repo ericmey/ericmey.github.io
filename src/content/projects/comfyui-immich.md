@@ -7,7 +7,7 @@ links:
   - { label: GitHub, url: 'https://github.com/ericmey/comfyui-immich' }
 ---
 
-It uploads each render to [Immich](https://immich.app) as it's produced. A local preview is written first, so an Immich outage doesn't lose a render. The API key never becomes a node input, so it never lands in workflow JSON or PNG metadata.
+It uploads saved renders to [Immich](https://immich.app). A local preview is written first, so a failed upload doesn't lose the render, and failures are reported per image. The API key never becomes a node input, so it never lands in workflow JSON or PNG metadata.
 
 A 2026 security pass found and fixed two issues:
 - an import-time network patch that could downgrade other code's HTTPS to plaintext;

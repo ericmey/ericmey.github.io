@@ -5,17 +5,18 @@ import { SITE } from '../site';
 <Base title="About" description={SITE.tagline}>
   <h1>About</h1>
   <div class="prose">
-    <p>I build systems. Some run on code, some run on hardware, and most end up a mix of both.</p>
+    <p>I build systems. Some run on code, some run on hardware, and most end up being a mix of both.</p>
     <p>
-      My work sits in applied AI: routing requests to the right model, giving a fleet of agents shared
-      memory, voice and image pipelines, and the evaluation work that says whether any of it is good.
-      I run my own infrastructure, from a Jetson Orin Nano at the edge to GPU render servers, and I like
-      to measure what I build before I claim anything about it.
+      I work across JavaScript (Node, TypeScript, React), Java, Python and C, with a focus on AI
+      orchestration, agentic systems and multi-modal pipelines. I run my own infrastructure and build
+      image-generation pipelines with ComfyUI and custom Python tooling.
     </p>
     <p>
-      I work across Python, TypeScript and Java, and C for hardware. Outside of that: guitar, sound design,
-      and building things that don't fit neatly into categories.
+      Recently: a request router that moved a routing decision off a 9B model onto a Jetson Orin Nano,
+      measured on a sealed test (<a href="/projects/five-lane-router">details</a>), and a shared memory
+      server for a fleet of agents (<a href="/projects/musubi">Musubi</a>).
     </p>
+    <p>Outside of that: guitar, sound design, visual work, and building things that don't fit neatly into categories.</p>
     <p>Based in {SITE.location}.</p>
   </div>
 </Base>
