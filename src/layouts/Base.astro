@@ -57,7 +57,7 @@ const current = (href: string) => path.startsWith(href);
           {nav.map((n) => (
             <a href={n.href} aria-current={current(n.href) ? 'page' : undefined}>{n.label}</a>
           ))}
-          <button class="theme-toggle" type="button" aria-label="Toggle dark mode" id="theme-toggle">◐</button>
+          <button class="theme-toggle" type="button" aria-label="Dark mode" aria-pressed="false" id="theme-toggle">◐</button>
         </nav>
       </div>
     </header>
@@ -74,11 +74,17 @@ const current = (href: string) => path.startsWith(href);
       </div>
     </footer>
     <script is:inline>
-      document.getElementById('theme-toggle').addEventListener('click', function () {
-        var next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
-        document.documentElement.dataset.theme = next;
-        try { localStorage.setItem('theme', next); } catch (e) {}
-      });
+      (function () {
+        var btn = document.getElementById('theme-toggle');
+        var sync = function () { btn.setAttribute('aria-pressed', String(document.documentElement.dataset.theme === 'dark')); };
+        sync();
+        btn.addEventListener('click', function () {
+          var next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+          document.documentElement.dataset.theme = next;
+          try { localStorage.setItem('theme', next); } catch (e) {}
+          sync();
+        });
+      })();
     </script>
   </body>
 </html>

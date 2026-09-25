@@ -5,7 +5,7 @@
 /* Graphite + amber, taken from Eric's profile banner. */
 :root {
   --paper: #f6f4ef; --ink: #17171a; --muted: #5c5f66; --line: #e2ded5;
-  --card: #fffdf9; --tag: #eeeae1; --amber: #c9731a; --amber-soft: #f3d9b8;
+  --card: #fffdf9; --tag: #eeeae1; --amber: #c9731a; --amber-text: #9c560c; --amber-soft: #f3d9b8;
   --link: #9a5712; --shadow: 0 1px 2px rgb(0 0 0 / 0.04), 0 8px 24px rgb(0 0 0 / 0.06);
   --display: 'Fraunces Variable', Georgia, serif;
   --sans: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
@@ -14,14 +14,14 @@
 }
 :root[data-theme='dark'] {
   --paper: #0f1012; --ink: #ecebe7; --muted: #a3a6ad; --line: #26282d;
-  --card: #16171a; --tag: #202227; --amber: #f0a03a; --amber-soft: #3a2a14;
+  --card: #16171a; --tag: #202227; --amber: #f0a03a; --amber-text: #f0a03a; --amber-soft: #3a2a14;
   --link: #f3b35c; --shadow: 0 1px 2px rgb(0 0 0 / 0.3), 0 12px 32px rgb(0 0 0 / 0.35);
 }
 * { box-sizing: border-box; }
 html { background: var(--paper); color: var(--ink); scroll-behavior: smooth; }
 body { margin: 0; font-family: var(--sans); font-size: 1.0625rem; line-height: 1.65; -webkit-font-smoothing: antialiased; }
 a { color: var(--link); text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
-a:hover { color: var(--amber); }
+a:hover { color: var(--amber-text); }
 img { max-width: 100%; display: block; }
 .wrap { max-width: var(--max); margin: 0 auto; padding: 0 1.25rem; }
 .narrow { max-width: 46rem; }
@@ -31,7 +31,7 @@ header.site { position: sticky; top: 0; z-index: 10; backdrop-filter: saturate(1
   background: color-mix(in srgb, var(--paper) 82%, transparent); border-bottom: 1px solid var(--line); }
 header.site .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; height: 3.75rem; }
 .brand { font-family: var(--display); font-weight: 600; font-size: 1.25rem; color: var(--ink); text-decoration: none; letter-spacing: -0.01em; }
-.brand span { color: var(--amber); }
+.brand span { color: var(--amber-text); }
 nav.main { display: flex; align-items: center; gap: 1.25rem; }
 nav.main a { color: var(--muted); text-decoration: none; font-size: 0.95rem; }
 nav.main a[aria-current='page'], nav.main a:hover { color: var(--ink); }
@@ -80,13 +80,13 @@ h2 { font-size: clamp(1.6rem, 3vw, 2.1rem); font-weight: 600; margin: 0; }
 .card { position: relative; }
 .card p { margin: 0; color: var(--muted); font-size: 0.97rem; }
 .meta { font-family: var(--mono); font-size: 0.78rem; color: var(--muted); letter-spacing: 0.02em; margin-top: auto; }
-.venue { color: var(--amber); }
+.venue { color: var(--amber-text); }
 .tags { display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 0.25rem 0 0; padding: 0; list-style: none; }
 .tags li { font-family: var(--mono); font-size: 0.72rem; background: var(--tag); color: var(--muted); border-radius: 6px; padding: 0.12rem 0.5rem; }
 
 /* Project cards: an amber rule instead of an image */
 .project { border-top: 3px solid var(--amber); }
-.project .kicker { font-family: var(--mono); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--amber); }
+.project .kicker { font-family: var(--mono); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--amber-text); }
 
 /* News */
 .news { list-style: none; margin: 0; padding: 0; border-left: 2px solid var(--line); }
@@ -118,4 +118,4 @@ footer.site nav { display: flex; gap: 1.1rem; flex-wrap: wrap; }
   background: linear-gradient(90deg, transparent, #f0a03a 50%, transparent); box-shadow: 0 0 18px #f0a03a; }
 /* News: quieter links */
 .news a { color: var(--ink); text-decoration: none; }
-.news a:hover { color: var(--amber); text-decoration: underline; }
+.news a:hover { color: var(--amber-text); text-decoration: underline; }
