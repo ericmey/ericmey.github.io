@@ -1,6 +1,6 @@
 ---
 title: Musubi
-summary: Shared memory for a small fleet of AI agents. It has three planes (episodic, concept, curated) and a lifecycle engine that matures raw captures into a human-reviewable knowledge base.
+summary: Shared storage and retrieval for agent observations and context, with a path from raw captures to human-reviewed notes.
 order: 20
 featured: true
 tags: [memory, retrieval, qdrant, hybrid-search, agents, python]
@@ -12,7 +12,7 @@ evidence:
   - { claim: 'Evaluation workflow and benchmark code', url: 'https://github.com/ericmey/musubi/blob/main/.github/workflows/evals.yml' }
 ---
 
-Musubi is a memory server for the point where one assistant is not enough. It lets several agents, each with its own role, share what they learn through one API. The server and [host integrations](/projects/musubi-ecosystem) are public, with separate release paths.
+Musubi is a memory server for the point where one assistant is not enough. Several agents can capture observations and retrieve relevant context through one API while keeping namespace and access boundaries. The server and [host integrations](/projects/musubi-ecosystem) are public, with separate release paths.
 
 - **Three planes.** *Episodic* holds raw captures, scored for importance. *Concept* holds themes synthesized nightly from matured episodics. *Curated* holds notes that clear a promotion gate and are written to an Obsidian vault, where a human reviews and edits them. Edits flow back.
 - **A lifecycle engine**: maturation, synthesis, promotion, demotion and reflection sweeps. Each one is file-locked, idempotent, and journaled.
