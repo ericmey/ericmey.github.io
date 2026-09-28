@@ -20,4 +20,4 @@ evidence:
 
 The five linked plugins are separate repositories. Features differ by host: do not assume an install path, automatic capture, or a release in one host applies to another. Start with the repository for the host you use. The harness is [published on PyPI](https://pypi.org/project/musubi-harness/); OpenClaw's package is [on npm](https://www.npmjs.com/package/openclaw-musubi).
 
-I work on the capture contract, evaluation and failure paths because agent memory only helps if a missed turn is visible and recoverable. The repositories show the implementation and the tests behind that claim.
+The capture contract, evaluation and failure paths matter because agent memory only helps if a missed turn is visible and recoverable. The linked repositories show the implementation and tests.

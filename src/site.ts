@@ -1,8 +1,8 @@
 // Site-wide identity. Edit here, not in the templates.
 export const SITE = {
   name: 'Eric Mey',
-  title: 'Eric Mey: AI engineer, developer relations and forward deployment',
-  tagline: 'I build agentic and voice AI systems, publish independent tools, and show other engineers how to test and use them.',
+  title: 'Eric Mey: Applied AI Engineer',
+  tagline: 'I build voice and agent systems, measure how they behave, and turn what I learn into tools and guides for other developers.',
   location: 'Carmel, Indiana',
   links: {
     github: 'https://github.com/ericmey',

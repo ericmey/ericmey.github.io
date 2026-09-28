@@ -18,6 +18,6 @@ Musubi is a memory server for the point where one assistant is not enough. It le
 - **A lifecycle engine**: maturation, synthesis, promotion, demotion and reflection sweeps. Each one is file-locked, idempotent, and journaled.
 - **Hybrid retrieval.** Dense and sparse vectors in Qdrant with a reranker, served by TEI, with fast and deep retrieval paths.
 - **Per-namespace auth**: a token grants `r`, `w` or `rw` on namespace patterns, plus a separate `operator` scope ([scope checks](https://github.com/ericmey/musubi/blob/main/src/musubi/auth/scopes.py)).
-- **Evaluation.** A CI retrieval benchmark checks changes against a recorded baseline. I have used a failed gate to trace a result moving from rank 1 to rank 2 rather than silently relaxing the threshold.
+- **Evaluation.** A CI retrieval benchmark checks changes against a recorded baseline and keeps regressions visible for investigation.
 
 Python 3.12, pydantic v2, strict mypy, FastAPI, Docker Compose, and Ansible for managed hosts.
