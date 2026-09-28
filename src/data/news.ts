@@ -5,9 +5,14 @@ export interface NewsItem { date: string; text: string; url?: string }
 
 export const NEWS: NewsItem[] = [
   {
-    date: '2026-09-25',
-    text: 'Musubi gains a CPU-only quickstart, proven in CI: two agents share memory, and scopes hold.',
-    url: 'https://github.com/ericmey/musubi/pull/825',
+    date: '2026-09-28',
+    text: 'Released Musubi harness 1.7.0, the shared runtime for host integrations.',
+    url: 'https://github.com/sourceblender/musubi-harness/releases/tag/v1.7.0',
+  },
+  {
+    date: '2026-09-28',
+    text: 'Published the first Musubi Grok plugin release.',
+    url: 'https://github.com/sourceblender/musubi-grok/releases/tag/v0.1.0',
   },
   {
     date: '2026-09-24',

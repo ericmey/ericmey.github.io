@@ -6,19 +6,12 @@ import { SITE } from '../site';
   <div class="wrap">
   <header class="page-head"><h1>About</h1></header>
   <div class="prose">
-    <p>I build systems. Some run on code, some run on hardware, and most end up being a mix of both.</p>
-    <p>
-      I work across JavaScript (Node, TypeScript, React), Java, Python and C, with a focus on AI
-      orchestration, agentic systems and multi-modal pipelines. I run my own infrastructure and build
-      image-generation pipelines with ComfyUI and custom Python tooling.
-    </p>
-    <p>
-      Recently: a request router that moved a routing decision off a 9B model onto a Jetson Orin Nano,
-      measured on a sealed test (<a href="/projects/five-lane-router">details</a>), and a shared memory
-      server for a fleet of agents (<a href="/projects/musubi">Musubi</a>).
-    </p>
-    <p>Outside of that: guitar, sound design, visual work, and building things that don't fit neatly into categories.</p>
-    <p>Based in {SITE.location}.</p>
+    <p>I build AI systems, prove they work, and show other engineers how to build them too. My work spans hands-on engineering, technical leadership and customer-facing solution architecture.</p>
+    <p>At SalesAi, I lead emerging technology and the AI Center of Practice. I have built a custom model for phone conversations, speech integrations on Google Cloud L4 GPUs, an agent evaluation harness, a customer-data LoRA fine-tuning pipeline, social communication agents and LiveKit voice agents. I designed and led the move from a white-label voice service to our own agent harness using Whisper, Gemini, ElevenLabs, Twilio SIP and GCP. This company work is described here, not published as open source.</p>
+    <p>My independent work is public. I published a <a href="/projects/five-lane-router">request router</a> with its model, dataset, evaluation and a <a href="https://huggingface.co/blog/ericmey/train-your-own-request-router">step-by-step tutorial</a>. I built <a href="/projects/musubi">Musubi</a>, shared memory infrastructure for AI agents, and a <a href="/projects/musubi-ecosystem">family of host plugins</a> that bring it into the tools people already use.</p>
+    <p>Before this, I led product engineering at SalesAi and engineering teams at Salesforce. I managed Salesforce's internal Slack engineering team and its integration of Einstein AI into internal tools. Earlier work includes software for county governments and my own consultancy.</p>
+    <p>I work in Python, TypeScript, JavaScript, Java and C, across models, APIs, hardware and deployment. Outside of work: guitar, sound design and custom music hardware.</p>
+    <p>Based in {SITE.location}. I work remotely and can travel. <a href={`mailto:${SITE.links.email}`}>Email me</a> or find me on <a href={SITE.links.linkedin}>LinkedIn</a>.</p>
   </div>
   </div>
 </Base>

@@ -1,6 +1,6 @@
 ---
 title: Five-lane request router
-summary: A ModernBERT-large classifier that decides what kind of answer a request needs (chat, image, search, audio or video) before any larger model runs, on a Jetson Orin Nano.
+summary: A published ModernBERT router, training dataset, reproducible evaluation and tutorial for choosing chat, image, search, audio or video.
 order: 10
 featured: true
 tags: [text-classification, modernbert, edge, evals, jetson]
@@ -11,12 +11,13 @@ links:
 evidence:
   - { claim: 'Model card, results and limits', url: 'https://huggingface.co/ericmey/five-lane-router-modernbert-large' }
   - { claim: '2,334 hand-labelled training rows, with the labelling rules', url: 'https://huggingface.co/datasets/ericmey/five-lane-router' }
+  - { claim: 'Public eval, raw predictions and rerun instructions', url: 'https://huggingface.co/blog/ericmey/train-your-own-request-router' }
 ---
 
-A personal AI assistant was routing every request through a 9B generative model just to decide *what kind* of answer to produce. This project replaces that step with a fine-tuned ModernBERT-large classifier running as a TensorRT FP16 engine on an NVIDIA Jetson Orin Nano.
+A personal AI assistant was routing every request through a 9B generative model just to decide *what kind* of answer to produce. I fine-tuned ModernBERT-large for that classification task and integrated it as a TensorRT FP16 engine on an NVIDIA Jetson Orin Nano. At the model-card release, the 9B model still served live traffic.
 
-**What was measured, quoted from the model card:** both routers were run on the same 60 held-out cases, three times each. The cases were sealed before training, leak-checked, and used once. The classifier routed **180 / 180** correctly against **175 / 180** for the 9B router, at **42 / 45.6 ms** p50 / p95 client-side latency against 771 / 1,269 ms.
+**Public, rerunnable evaluation:** on a frozen 60-row authored challenge, the pinned router scored **58 / 60** against **46 / 60** for a predeclared TF-IDF baseline. The [tutorial](https://huggingface.co/blog/ericmey/train-your-own-request-router) includes the scoring steps and raw results. It is a teaching and regression set, authored with knowledge of the label rules, not an independent blind holdout or live-traffic sample.
 
-**What that does not show,** also from the card: it is one sealed set of 60 authored cases, not a production soak. The two routers ran on different hardware, so the latency compares routing calls in one setup, not model speed. And at release the 9B was still routing production.
+**Separate sealed comparison:** the [model card](https://huggingface.co/ericmey/five-lane-router-modernbert-large) also reports 60 held-out cases, run three times for each router: 180 / 180 correct calls for ModernBERT and 175 / 180 for the 9B router. Client-side p50 / p95 latency was 42 / 45.6 ms versus 771 / 1,269 ms on different hardware. That comparison is one authored test set, not a production soak or a general model-speed benchmark.
 
 **What I'd point a reviewer at:** the failure that shaped the data. An earlier candidate failed its sealed test by sending a chat request that *mentioned* drawing to `image`. The fix was 253 contrast rows written for that failure shape, without seeing the failing prompts, followed by a fresh sealed test.

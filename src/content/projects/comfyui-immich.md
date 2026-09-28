@@ -4,7 +4,7 @@ summary: ComfyUI custom nodes that save generated images to a self-hosted Immich
 order: 40
 tags: [comfyui, python, immich, image-generation]
 links:
-  - { label: GitHub, url: 'https://github.com/ericmey/comfyui-immich' }
+  - { label: GitHub, url: 'https://github.com/sourceblender/comfyui-immich' }
 ---
 
 It uploads saved renders to [Immich](https://immich.app). A local preview is written first, so a failed upload doesn't lose the render, and failures are reported per image. The API key never becomes a node input, so it never lands in workflow JSON or PNG metadata.

@@ -25,14 +25,16 @@ const news = [
 <Base>
   <section class="hero">
     <div class="wrap">
-      <p class="eyebrow">Applied AI systems</p>
+      <p class="eyebrow">AI engineering · Developer relations · Forward deployment</p>
       <h1>{SITE.name}</h1>
       <p class="lede">{SITE.tagline}</p>
+      <p class="intro">At SalesAi, I develop voice and agent systems and lead the AI Center of Practice. Independently, I publish models, memory infrastructure, evaluations and tutorials that other engineers can inspect and run.</p>
       <div class="pills">
         <a class="pill primary" href="/projects">See the work</a>
         <a class="pill" href="/articles">Read the writing</a>
         <a class="pill" href={SITE.links.github}>GitHub</a>
         <a class="pill" href={SITE.links.huggingface}>Hugging Face</a>
+        {SITE.links.email && <a class="pill" href={`mailto:${SITE.links.email}`}>Contact me</a>}
         {SITE.links.linkedin && <a class="pill" href={SITE.links.linkedin}>LinkedIn</a>}
       </div>
     </div>

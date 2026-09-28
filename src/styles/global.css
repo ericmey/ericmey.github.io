@@ -47,6 +47,7 @@ nav.main a[aria-current='page'], nav.main a:hover { color: var(--ink); }
 .eyebrow { font-family: var(--mono); font-size: 0.8rem; letter-spacing: 0.14em; text-transform: uppercase; color: #f0a03a; margin: 0 0 1rem; }
 .hero h1 { font-family: var(--display); font-weight: 600; font-size: clamp(2.6rem, 6vw, 4.5rem); line-height: 1.02; letter-spacing: -0.03em; margin: 0 0 1.25rem; max-width: 14ch; }
 .hero .lede { font-size: clamp(1.1rem, 2vw, 1.3rem); color: #cfcdc7; max-width: 38rem; margin: 0 0 2rem; }
+.hero .intro { color: #dedbd3; max-width: 44rem; margin: -0.5rem 0 2rem; line-height: 1.7; }
 .pills { display: flex; flex-wrap: wrap; gap: 0.6rem; }
 .pill { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.55rem 1rem; border-radius: 999px; font-size: 0.95rem; text-decoration: none;
   border: 1px solid rgb(255 255 255 / 0.22); color: #f3f1ec; background: rgb(255 255 255 / 0.06); }
