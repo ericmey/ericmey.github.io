@@ -14,7 +14,7 @@ evidence:
   - { claim: 'Public eval, raw predictions and rerun instructions', url: 'https://huggingface.co/blog/ericmey/train-your-own-request-router' }
 ---
 
-A personal AI assistant was routing every request through a 9B generative model just to select a processing path: `chat`, `image`, `search`, `audio` or `video`. I fine-tuned ModernBERT-large for that classification task and integrated it as a TensorRT FP16 engine on an NVIDIA Jetson Orin Nano. At the model-card release, the 9B model still served live traffic.
+A personal AI assistant was routing every request through a 9B generative model just to select a processing path: `chat`, `image`, `search`, `audio` or `video`. A fine-tuned ModernBERT-large classifier was integrated as a TensorRT FP16 engine on an NVIDIA Jetson Orin Nano for that task. At the model-card release, the 9B model still served live traffic.
 
 **Public, rerunnable evaluation:** on a frozen 60-row authored challenge, the pinned router scored **58 / 60** against **46 / 60** for a predeclared TF-IDF baseline. The [tutorial](https://huggingface.co/blog/ericmey/train-your-own-request-router) includes the scoring steps and raw results. It is a teaching and regression set, authored with knowledge of the label rules, not an independent blind holdout or live-traffic sample.
 
