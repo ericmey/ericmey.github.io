@@ -1,0 +1,17 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import ArticleItem from '../../components/ArticleItem.astro';
+
+const articles = (await getCollection('articles', (a) => !a.data.draft))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+<Base title="Writing" description="Essays and tutorials on applied AI systems: routing, evals, voice, inference and agents.">
+  <div class="wrap">
+    <header class="page-head">
+      <h1>Writing</h1>
+      <p class="lede">{articles.length} pieces on applied AI systems (routing, evals, voice, inference and agents), each tied to work I actually built or ran.</p>
+    </header>
+    <div class="grid">{articles.map((a) => <ArticleItem article={a} level={2} />)}</div>
+  </div>
+</Base>
