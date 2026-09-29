@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 700" fill="none" role="img" aria-label="A voice signal leading into a small network of agents and memory">
+  <defs>
+    <linearGradient id="ground" x1="0" y1="0" x2="1600" y2="700" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#101316"/>
+      <stop offset="1" stop-color="#1b2024"/>
+    </linearGradient>
+    <linearGradient id="fade" x1="700" y1="0" x2="1000" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#d8dee0" stop-opacity="0"/>
+      <stop offset="1" stop-color="#d8dee0" stop-opacity=".9"/>
+    </linearGradient>
+    <pattern id="minor-grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" stroke="#d8dee0" stroke-opacity=".075" stroke-width="1"/>
+    </pattern>
+    <pattern id="major-grid" width="160" height="160" patternUnits="userSpaceOnUse">
+      <path d="M160 0H0V160" stroke="#d8dee0" stroke-opacity=".12" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="grid-fade" x1="900" y1="0" x2="1100" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="white" stop-opacity="0"/>
+      <stop offset="1" stop-color="white"/>
+    </linearGradient>
+    <mask id="grid-mask"><path fill="url(#grid-fade)" d="M900 0h700v700H900z"/></mask>
+  </defs>
+  <path fill="url(#ground)" d="M0 0h1600v700H0z"/>
+  <g mask="url(#grid-mask)">
+    <path fill="url(#minor-grid)" d="M900 0h700v700H900z"/>
+    <path fill="url(#major-grid)" d="M900 0h700v700H900z"/>
+  </g>
+  <path d="M760 354h50c18 0 24-3 32-3 12 0 15 12 22 12 10 0 13-44 23-44 12 0 13 75 26 75 13 0 13-107 26-107 14 0 14 132 28 132 13 0 14-126 27-126 14 0 13 105 27 105 11 0 14-69 24-69 12 0 15 32 28 32 10 0 17-7 30-7" transform="translate(350 0) scale(.8 1)" stroke="url(#fade)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1232.4 354c16 0 8-96 23.6-96" stroke="#d8dee0" stroke-opacity=".7" stroke-width="1.7"/>
+  <path d="m1256 258 104 59m-104-59 136-118m-136 118 28 155m76-96-76 96m76-96 120 54m-88-231 88 231" stroke="#c7d0d3" stroke-opacity=".5" stroke-width="1.5"/>
+  <circle cx="1256" cy="258" r="10" fill="#f0a03a"/>
+  <circle cx="1360" cy="317" r="9" stroke="#d8dee0" stroke-opacity=".82" stroke-width="1.7"/>
+  <circle cx="1392" cy="140" r="8" stroke="#d8dee0" stroke-opacity=".8" stroke-width="1.7"/>
+  <circle cx="1284" cy="413" r="8" stroke="#d8dee0" stroke-opacity=".8" stroke-width="1.7"/>
+  <circle cx="1480" cy="371" r="8" stroke="#d8dee0" stroke-opacity=".8" stroke-width="1.7"/>
+  <path d="M1040 485v16m0-8h300m0-8v16" stroke="#d8dee0" stroke-opacity=".46" stroke-width="1.2"/>
+  <path d="M1140 493h160" stroke="#f0a03a" stroke-opacity=".8" stroke-width="1.5"/>
+  <g fill="#d8dee0" fill-opacity=".68" font-family="ui-monospace, Menlo, monospace" font-size="13" letter-spacing="2">
+    <text x="969" y="275">01 / VOICE</text>
+    <text x="1328" y="245">02 / AGENTS</text>
+    <text x="1370" y="448">03 / MEMORY</text>
+  </g>
+  <path d="M970 285h86m340-45 30-45m-46 250 33-40" stroke="#d8dee0" stroke-opacity=".42" stroke-width="1.1"/>
+  <path d="M1495 548h-238v72h238v-72Zm-238 34h238" stroke="#d8dee0" stroke-opacity=".35" stroke-width="1"/>
+  <text x="1274" y="573" fill="#d8dee0" fill-opacity=".66" font-family="ui-monospace, Menlo, monospace" font-size="12" letter-spacing="1.5">FIG. 01</text>
+  <text x="1274" y="606" fill="#f0a03a" font-family="ui-monospace, Menlo, monospace" font-size="12" letter-spacing="1.5">CAPTURE PATH</text>
+</svg>
