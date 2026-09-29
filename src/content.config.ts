@@ -10,6 +10,7 @@ const projects = defineCollection({
     summary: z.string(), // one sentence, shown on cards
     order: z.number().default(100), // lower = earlier on the page
     featured: z.boolean().default(false),
+    cover: z.string().optional(), // decorative project diagram under /public
     status: z.enum(['active', 'maintained', 'archived']).default('active'),
     tags: z.array(z.string()).default([]),
     links: z

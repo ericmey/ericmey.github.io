@@ -3,6 +3,7 @@ title: Five-lane request router
 summary: A published ModernBERT classifier that routes requests among five task paths, with its training data, evaluation and tutorial.
 order: 10
 featured: true
+cover: /diagrams/five-lane-router.svg
 tags: [text-classification, modernbert, edge, evals, jetson]
 links:
   - { label: Model on Hugging Face, url: 'https://huggingface.co/ericmey/five-lane-router-modernbert-large' }

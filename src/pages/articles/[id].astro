@@ -9,7 +9,7 @@ export async function getStaticPaths() {
 }
 const { article } = Astro.props;
 const { Content } = await render(article);
-const { title, summary, date, venue } = article.data;
+const { title, summary, date, venue, cover } = article.data;
 const day = date.toISOString().slice(0, 10);
 ---
 <Base title={title} description={summary}>
@@ -18,6 +18,7 @@ const day = date.toISOString().slice(0, 10);
       <h1>{title}</h1>
       <p class="meta"><time datetime={day}>{day}</time> · {venue}</p>
     </header>
+    {cover && <img class="detail-cover" src={cover} alt="" width="1200" height="675" />}
     <div class="prose"><Content /></div>
     <p><a href="/articles">← All writing</a></p>
   </div>

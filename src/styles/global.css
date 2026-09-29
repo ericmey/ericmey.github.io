@@ -66,6 +66,12 @@ h2 { font-size: clamp(1.6rem, 3vw, 2.1rem); font-weight: 600; margin: 0; }
 .page-head { padding: 3.5rem 0 1rem; }
 .page-head h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 600; margin: 0 0 0.75rem; }
 .page-head .lede { color: var(--muted); font-size: 1.15rem; max-width: 42rem; margin: 0; }
+.page-head.banner { display: flex; flex-direction: column; justify-content: center; min-height: 16rem; padding: 2.5rem clamp(1.5rem, 4vw, 3rem); margin: 1.75rem 0 2rem;
+  border: 1px solid #3a4242; border-radius: 0.75rem; color: #f3f1ec; background-color: #101519; background-size: cover; background-position: center; }
+.page-head.banner .lede { color: #d4d6d2; }
+.banner-projects { background-image: url('/banners/projects.svg'); }
+.banner-writing { background-image: url('/banners/writing.svg'); }
+.banner-about { background-image: url('/banners/about.svg'); }
 
 /* Cards */
 .grid { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr)); }
@@ -86,7 +92,7 @@ h2 { font-size: clamp(1.6rem, 3vw, 2.1rem); font-weight: 600; margin: 0; }
 .tags { display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 0.25rem 0 0; padding: 0; list-style: none; }
 .tags li { font-family: var(--mono); font-size: 0.72rem; background: var(--tag); color: var(--muted); border-radius: 6px; padding: 0.12rem 0.5rem; }
 
-/* Project cards: an amber rule instead of an image */
+/* Project diagrams carry the same charcoal and amber drafting language as the hero. */
 .project { border-top: 3px solid var(--amber); }
 .project .kicker { font-family: var(--mono); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--amber-text); }
 
@@ -98,6 +104,7 @@ h2 { font-size: clamp(1.6rem, 3vw, 2.1rem); font-weight: 600; margin: 0; }
 
 /* Project / article detail */
 .prose { max-width: 44rem; }
+.detail-cover { width: 100%; max-width: 44rem; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border: 1px solid var(--line); border-radius: 0.75rem; margin: 0.5rem 0 2rem; }
 .about-portrait { margin: 0 0 2rem; aspect-ratio: 1672 / 941; overflow: hidden; border: 1px solid var(--line); border-radius: 0.75rem; background: #161616 url('/eric-editorial-banner-v1.webp') center / cover no-repeat; }
 .prose p, .prose li { color: var(--ink); }
 .detail-links { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 1.25rem 0; }
@@ -110,7 +117,7 @@ h2 { font-size: clamp(1.6rem, 3vw, 2.1rem); font-weight: 600; margin: 0; }
 footer.site { border-top: 1px solid var(--line); color: var(--muted); font-size: 0.92rem; margin-top: 3rem; }
 footer.site .wrap { padding-top: 1.75rem; padding-bottom: 2.5rem; display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; justify-content: space-between; }
 footer.site nav { display: flex; gap: 1.1rem; flex-wrap: wrap; }
-@media (max-width: 40rem) { nav.main { gap: 0.85rem; } nav.main a { font-size: 0.9rem; } .hero { background-image: none; } .hero .wrap { padding-top: 4rem; padding-bottom: 4rem; } }
+@media (max-width: 40rem) { nav.main { gap: 0.85rem; } nav.main a { font-size: 0.9rem; } .hero { background-image: none; } .hero .wrap { padding-top: 4rem; padding-bottom: 4rem; } .page-head.banner { min-height: 13rem; margin-top: 1.25rem; background-image: none; } }
 @media (prefers-reduced-motion: reduce) { .card { transition: none; } .card:hover { transform: none; } html { scroll-behavior: auto; } }
 
 /* Featured: two across on wide screens instead of leaving an empty column */

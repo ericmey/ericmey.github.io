@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-hidden="true">
+<defs>
+ <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0V36" fill="none" stroke="#9eaaad" stroke-opacity=".09" stroke-width="1"/></pattern>
+ <linearGradient id="ground" x2="1" y2="1"><stop stop-color="#101519"/><stop offset="1" stop-color="#1d2224"/></linearGradient>
+</defs>
+<style>.box{fill:none;stroke:#dde1df;stroke-opacity:.66;stroke-width:2.5}.line{fill:none;stroke:#dce2e0;stroke-opacity:.64;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}.dim{fill:none;stroke:#c8d2d0;stroke-opacity:.35;stroke-width:2;stroke-linecap:round}.hot{fill:none;stroke:#f0a03a;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}.node{fill:#f0a03a}.accent{fill:none;stroke:#f0a03a;stroke-width:3}.label{font:22px ui-monospace,monospace;fill:#e7e9e4;letter-spacing:3px}.small{font:17px ui-monospace,monospace;fill:#e7e9e4;letter-spacing:2px}</style>
+<rect width="1200" height="675" fill="url(#ground)"/><rect width="1200" height="675" fill="url(#grid)"/>
+<path d="M72 80h1056M72 578h1056" stroke="#a7b3b0" stroke-opacity=".35"/><path d="M72 80h192M72 578h192" stroke="#f0a03a" stroke-width="3"/>
+<text x="78" y="122" fill="#f0a03a" font-family="ui-monospace,monospace" font-size="16" letter-spacing="3">FIG. 02</text>
+
+ <g class="box"><rect x="146" y="153" width="294" height="90" rx="13"/><rect x="146" y="292" width="294" height="90" rx="13"/><rect x="146" y="431" width="294" height="90" rx="13"/></g>
+ <g class="label"><text x="180" y="208">EPISODIC</text><text x="180" y="347">CONCEPT</text><text x="180" y="486">CURATED</text></g>
+ <path d="M294 243v49m0 90v49" class="line"/><path d="M440 198h143m-143 139h143m-143 139h143" class="line"/>
+ <circle cx="583" cy="198" r="8" class="node"/><circle cx="583" cy="337" r="8" class="node"/><circle cx="583" cy="476" r="8" class="node"/>
+ <path d="M583 198h48v139h-48m48 0v139h-48m48-139h90" class="line"/>
+ <rect x="722" y="266" width="298" height="142" rx="20" class="box"/><circle cx="824" cy="337" r="36" class="accent"/><path d="M849 362l44 44" class="hot"/><path d="M914 305h63m-63 34h48" class="dim"/>
+ 
+<text x="76" y="626" fill="#dce2e0" font-family="ui-monospace,monospace" font-size="22" letter-spacing="4">MEMORY / RETRIEVAL</text>
+</svg>

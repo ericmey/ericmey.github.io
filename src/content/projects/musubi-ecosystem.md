@@ -3,6 +3,7 @@ title: Musubi runtime and host plugins
 summary: An open-source harness and separate plugins that connect Musubi memory to Claude Code, Codex, Grok, Hermes and OpenClaw.
 order: 25
 featured: true
+cover: /diagrams/musubi-ecosystem.svg
 tags: [agents, memory, plugins, python, typescript]
 links:
   - { label: Shared harness, url: 'https://github.com/sourceblender/musubi-harness' }

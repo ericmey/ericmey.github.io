@@ -3,6 +3,7 @@ title: Musubi
 summary: Shared storage and retrieval for agent observations and context, with a path from raw captures to human-reviewed notes.
 order: 20
 featured: true
+cover: /diagrams/musubi.svg
 tags: [memory, retrieval, qdrant, hybrid-search, agents, python]
 links:
   - { label: GitHub, url: 'https://github.com/ericmey/musubi' }

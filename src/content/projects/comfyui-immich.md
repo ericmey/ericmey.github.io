@@ -2,6 +2,7 @@
 title: comfyui-immich
 summary: ComfyUI custom nodes that save generated images to a self-hosted Immich library, with prompt and workflow metadata, albums and a connection-status panel.
 order: 40
+cover: /diagrams/comfyui-immich.svg
 tags: [comfyui, python, immich, image-generation]
 links:
   - { label: GitHub, url: 'https://github.com/sourceblender/comfyui-immich' }
