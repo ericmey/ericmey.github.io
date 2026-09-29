@@ -8,7 +8,7 @@ tags: [context engineering, developer tools, coding agents]
 
 A coding agent can read a repository, but a fresh session does not know which files explain the system, which decisions are still in force, or which tempting approach already failed. It can reconstruct some of that from code and history. Repeating that work on every task costs time, and the reconstruction can be wrong.
 
-I use a **maintained map**: a small collection of Markdown files that tells the agent where to look and how to check what it finds. This grew out of a lesson I led for engineers on using an Obsidian vault with Claude Code. The useful part is not Obsidian itself. It is the discipline of making context inspectable, versioned, and subordinate to the running system.
+I use a **maintained map**: a small collection of Markdown files that tells the agent where to look and how to check what it finds. The raw-sources-to-maintained-wiki pattern comes from [Andrej Karpathy's LLM Wiki](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f). I adapted it for coding work in a lesson I led for engineers on using an Obsidian vault with Claude Code. The useful part is not Obsidian itself. It is the discipline of making context inspectable, versioned, and subordinate to the running system.
 
 ## The shape
 
@@ -47,4 +47,4 @@ This approach aims to reduce repeated context loading and corrections. I do **no
 
 Start with one real task. Write a short entry point, one architecture page, and one decision or gotcha the agent would otherwise rediscover. Ask an agent to work from those files, then inspect where it still searched, guessed, or contradicted the code. Improve the map from that observation. A useful vault is a maintained part of the engineering system, not a one-time upload of documentation.
 
-The lesson drew on public work such as [AgriciDaniel's Claude–Obsidian example](https://github.com/AgriciDaniel/claude-obsidian). The structure here is one way to apply that pattern in a software repository; the checks and ownership rules are the part I would keep even if the editor or agent changes.
+The lesson also drew on public work such as [AgriciDaniel's Claude–Obsidian example](https://github.com/AgriciDaniel/claude-obsidian). The structure here is one way to apply that pattern in a software repository; the checks and ownership rules are the part I would keep even if the editor or agent changes.
