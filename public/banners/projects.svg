@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 450" aria-hidden="true">
+<defs>
+ <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#b7c3c0" stroke-opacity=".08"/></pattern>
+ <linearGradient id="bg"><stop stop-color="#101519"/><stop offset="1" stop-color="#1b2022"/></linearGradient>
+ <linearGradient id="fade"><stop stop-color="#101519"/><stop offset=".52" stop-color="#101519" stop-opacity=".72"/><stop offset=".8" stop-color="#101519" stop-opacity="0"/></linearGradient>
+</defs>
+<rect width="1600" height="450" fill="url(#bg)"/><rect width="1600" height="450" fill="url(#grid)"/>
+
+  <g fill="none" stroke="#d8e0df" stroke-width="2" stroke-opacity=".52">
+    <rect x="965" y="86" width="250" height="120" rx="12"/><rect x="1042" y="254" width="250" height="120" rx="12"/><rect x="1320" y="168" width="210" height="120" rx="12"/>
+    <path d="M1215 146h105v82m-55 86h55v-86"/>
+    <path d="M1002 126h165m-165 28h116m-36 144h164m-164 28h108m175-116h124m-124 28h94" stroke-opacity=".32"/>
+  </g><circle cx="1320" cy="228" r="11" fill="#f0a03a"/><path d="M852 228h92" stroke="#f0a03a" stroke-width="2.5"/>
+ 
+<rect width="1600" height="450" fill="url(#fade)"/>
+<path d="M58 405h1484" stroke="#b8c5c2" stroke-opacity=".27"/><path d="M58 405h212" stroke="#f0a03a" stroke-width="3"/>
+</svg>

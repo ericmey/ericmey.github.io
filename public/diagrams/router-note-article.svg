@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-hidden="true">
+<defs>
+ <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0V36" fill="none" stroke="#9eaaad" stroke-opacity=".09" stroke-width="1"/></pattern>
+ <linearGradient id="ground" x2="1" y2="1"><stop stop-color="#101519"/><stop offset="1" stop-color="#1d2224"/></linearGradient>
+</defs>
+<style>.box{fill:none;stroke:#dde1df;stroke-opacity:.66;stroke-width:2.5}.line{fill:none;stroke:#dce2e0;stroke-opacity:.64;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}.dim{fill:none;stroke:#c8d2d0;stroke-opacity:.35;stroke-width:2;stroke-linecap:round}.hot{fill:none;stroke:#f0a03a;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}.node{fill:#f0a03a}.accent{fill:none;stroke:#f0a03a;stroke-width:3}.label{font:22px ui-monospace,monospace;fill:#e7e9e4;letter-spacing:3px}.small{font:17px ui-monospace,monospace;fill:#e7e9e4;letter-spacing:2px}</style>
+<rect width="1200" height="675" fill="url(#ground)"/><rect width="1200" height="675" fill="url(#grid)"/>
+<path d="M72 80h1056M72 578h1056" stroke="#a7b3b0" stroke-opacity=".35"/><path d="M72 80h192M72 578h192" stroke="#f0a03a" stroke-width="3"/>
+<text x="78" y="122" fill="#f0a03a" font-family="ui-monospace,monospace" font-size="16" letter-spacing="3">FIG. 09</text>
+
+ <path d="M174 337h185m0 0l126-135m-126 135l126-68m-126 68h126m-126 0l126 68m-126-68l126 135" class="line"/>
+ <circle cx="359" cy="337" r="42" class="accent"/><g class="box"><rect x="485" y="171" width="420" height="58" rx="11"/><rect x="485" y="240" width="420" height="58" rx="11"/><rect x="485" y="309" width="420" height="58" rx="11"/><rect x="485" y="378" width="420" height="58" rx="11"/><rect x="485" y="447" width="420" height="58" rx="11"/></g>
+ <path d="M499 337h390" class="hot"/>
+ 
+<text x="76" y="626" fill="#dce2e0" font-family="ui-monospace,monospace" font-size="22" letter-spacing="4">FIVE-LANE LAB NOTE</text>
+<text x="1122" y="626" text-anchor="end" fill="#b1bbb7" font-family="ui-monospace,monospace" font-size="17" letter-spacing="2">EM / SYSTEMS</text>
+</svg>

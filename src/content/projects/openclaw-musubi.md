@@ -2,6 +2,7 @@
 title: Musubi for OpenClaw
 summary: A first-class memory provider for OpenClaw agents, backed by Musubi. Eligible completed turns are committed to a durable outbox, with semantic recall, exact reads and deliberate stores.
 order: 30
+cover: /diagrams/openclaw-musubi.svg
 tags: [typescript, plugin, memory, agents]
 links:
   - { label: GitHub, url: 'https://github.com/sourceblender/musubi-openclaw' }

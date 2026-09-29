@@ -3,9 +3,10 @@ import type { CollectionEntry } from 'astro:content';
 interface Props { project: CollectionEntry<'projects'>; level?: 2 | 3 }
 const { project, level = 3 } = Astro.props;
 const H = `h${level}` as 'h2' | 'h3';
-const { title, summary, tags, featured } = project.data;
+const { title, summary, tags, featured, cover } = project.data;
 ---
 <article class="card project">
+  {cover && <div class="media"><img src={cover} alt="" loading="lazy" decoding="async" width="1200" height="675" /></div>}
   <div class="body">
     {featured && <span class="kicker">Featured</span>}
     <H><a href={`/projects/${project.id}`}>{title}</a></H>

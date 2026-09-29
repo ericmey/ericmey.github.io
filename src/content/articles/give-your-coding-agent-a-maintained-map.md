@@ -3,6 +3,7 @@ title: Give Your Coding Agent a Maintained Map
 summary: A small, reviewable knowledge vault can give a coding agent the right architecture and decisions without asking it to trust stale notes over the code.
 date: 2026-09-28
 venue: Portfolio
+cover: /diagrams/maintained-map-article.svg
 tags: [context engineering, developer tools, coding agents]
 ---
 
