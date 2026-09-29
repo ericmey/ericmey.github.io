@@ -13,5 +13,4 @@
  <rect x="677" y="236" width="348" height="200" rx="18" class="box"/><path d="M717 290h266m-266 45h207m-207 45h246" class="dim"/><circle cx="677" cy="337" r="11" class="node"/>
  
 <text x="76" y="626" fill="#dce2e0" font-family="ui-monospace,monospace" font-size="22" letter-spacing="4">ANSWER / CAPTURE / RECEIPT</text>
-<text x="1122" y="626" text-anchor="end" fill="#b1bbb7" font-family="ui-monospace,monospace" font-size="17" letter-spacing="2">EM / SYSTEMS</text>
 </svg>

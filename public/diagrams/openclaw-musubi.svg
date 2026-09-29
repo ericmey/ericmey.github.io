@@ -14,5 +14,4 @@
  <path d="M558 397h80m-418 0h80m674 0h30" class="dim"/><circle cx="596" cy="201" r="10" class="node"/><path d="M596 211v14" class="line"/>
  
 <text x="76" y="626" fill="#dce2e0" font-family="ui-monospace,monospace" font-size="22" letter-spacing="4">CAPTURE / OUTBOX / MEMORY</text>
-<text x="1122" y="626" text-anchor="end" fill="#b1bbb7" font-family="ui-monospace,monospace" font-size="17" letter-spacing="2">EM / SYSTEMS</text>
 </svg>

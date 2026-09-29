@@ -16,5 +16,4 @@
  <rect x="722" y="266" width="298" height="142" rx="20" class="box"/><circle cx="824" cy="337" r="36" class="accent"/><path d="M849 362l44 44" class="hot"/><path d="M914 305h63m-63 34h48" class="dim"/>
  
 <text x="76" y="626" fill="#dce2e0" font-family="ui-monospace,monospace" font-size="22" letter-spacing="4">MEMORY / RETRIEVAL</text>
-<text x="1122" y="626" text-anchor="end" fill="#b1bbb7" font-family="ui-monospace,monospace" font-size="17" letter-spacing="2">EM / SYSTEMS</text>
 </svg>

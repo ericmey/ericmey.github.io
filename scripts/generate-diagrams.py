@@ -81,7 +81,6 @@ BASE = '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="i
 <text x="78" y="122" fill="#f0a03a" font-family="ui-monospace,monospace" font-size="16" letter-spacing="3">FIG. {num}</text>
 {art}
 <text x="76" y="626" fill="#dce2e0" font-family="ui-monospace,monospace" font-size="22" letter-spacing="4">{caption}</text>
-<text x="1122" y="626" text-anchor="end" fill="#b1bbb7" font-family="ui-monospace,monospace" font-size="17" letter-spacing="2">EM / SYSTEMS</text>
 </svg>
 '''
 
